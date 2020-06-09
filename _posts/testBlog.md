@@ -1,9 +1,9 @@
 ---
 layout: post
 title: template page
-categories: [cate1, cate2]
-description: some word here
-keywords: keyword1, keyword2
+categories: blog
+description: test first blog
+keywords: test
 ---
 
-Content here 
+First blog!
