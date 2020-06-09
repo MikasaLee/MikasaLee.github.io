@@ -21,10 +21,10 @@ components:
     # 分享
     share:
         enabled: false
-    # 不蒜子访问统计
+    # 不算子访问统计
     busuanzi:
         enabled: true
-        start_date: 2020-05-03
+        start_date: 2020-06-10
 # 压缩页面内容
 compress_html:
   clippings: all
@@ -116,6 +116,7 @@ comments_provider: gitalk
 # https://disqus.com
 #disqus:
 #    username: 
+
 # https://imsun.net/posts/gitment-introduction/
 #gitment:
 #    owner: mzlogin
@@ -123,6 +124,7 @@ comments_provider: gitalk
 #   oauth:
 #       client_id: d2e1cbbd298958076462
 #        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: MikasaLee
