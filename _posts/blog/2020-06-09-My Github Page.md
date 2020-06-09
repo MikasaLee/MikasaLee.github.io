@@ -31,7 +31,7 @@ keywords: Github Page,jekyll,码志,gitalk,GitHub Application
 ### 配置评论模块
    我使用的是[gitalk](https://github.com/gitalk/gitalk)，参考于[基于 github issues 实现第三方评论系统](https://segmentfault.com/a/1190000011100934)。
 1. 先创建一个空仓库，用来放置评论的信息。
-2. 申请[GitHub Application](https://github.com/settings/applications/new)，其中Application name为空仓库的名字，Homepage URL和Authorization callback URL为你的Github Page的主页。![我的填写信息](images/blog/InforGitHubApplication.PNG)
+2. 申请[GitHub Application](https://github.com/settings/applications/new)，其中Application name为空仓库的名字，Homepage URL和Authorization callback URL为你的Github Page的主页。![我的填写信息](/images/blog/InforGitHubApplication.PNG)
 3.  得到GitHub Application的Client ID和Client Secret。并填入到_config.yml的配置中（132和133行）。即完成评论模块。
 
 ### 创建自己的博客
