@@ -9,6 +9,8 @@ keywords: Github Page,jekyll,码志,gitalk,GitHub Application
 # Github Page搭建过程以及之后使用过程中遇到的问题
    使用Github Page + jekyll 搭建博客，jekyll模板使用的是[码志](https://github.com/mzlogin/mzlogin.github.io),评论使用gitalk+GitHub Application搭建
 
+---
+
 ## 引用
 + [使用Github pages+jekyll搭建自己的博客（windows版）](https://www.cnblogs.com/zjjDaily/p/8695978.html)
 + [码志](https://github.com/mzlogin/mzlogin.github.io)
@@ -17,8 +19,12 @@ keywords: Github Page,jekyll,码志,gitalk,GitHub Application
 + [基于 github issues 实现第三方评论系统](https://segmentfault.com/a/1190000011100934)
 + [GitHub Application](https://github.com/settings/applications/new)
 
+---
+
 ## 准备
    参考[使用Github pages+jekyll搭建自己的博客（windows版）](https://www.cnblogs.com/zjjDaily/p/8695978.html) 完成Github账户注册（注：如果之后是直接fork jekyll的主题，那么无需创建Github Page，只需要fork主题之后修改仓库名称即可；如果是想自己clone/download/实现自己的jekyll模版，那么需要创建Github Page）。并在本机上安装好Ruby和jekyll。jekyll主题我选择的是[码志](https://github.com/mzlogin/mzlogin.github.io)，可以直接fork大佬的项目然后修改配置。
+
+---
 
 ## 配置码志
 
@@ -37,8 +43,7 @@ keywords: Github Page,jekyll,码志,gitalk,GitHub Application
 ### 创建自己的博客
   参考[码志](https://github.com/mzlogin/mzlogin.github.io)的"删除我的文章与图片"。删掉主题的文章，**并且自己的文章命名格式为：年-月-日-文章名称**，否则码志无法扫描到此文章。
 
-
-
+---
 
 ## 注意事项
 1. 引用图片的url为: /images/xxx 。

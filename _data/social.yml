@@ -18,9 +18,9 @@
 #  name: mzlogin
 #  url: http://weibo.com/mzlogin
 
-#- sitename: 知乎
-#  name: mzlogin
-# url: http://www.zhihu.com/people/mzlogin
+- sitename: 知乎
+  name: MikasaLee
+  url: https://www.zhihu.com/people/MikasaLee
 
 #- sitename: 豆瓣
 #  name: 壮哥不胖
