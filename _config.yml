@@ -4,10 +4,10 @@
 baseurl: ""
 url: ""
 date_format: "ordinal"
-title: MikasaLee's Blog
-subtitle: "Welcome to my blog"
+title: Mikasa Lee
+subtitle: "Apple Seed"
 description: ""
-keywords: 码志, MikasaLee
+keywords:  MikasaLee
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
