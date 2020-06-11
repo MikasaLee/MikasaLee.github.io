@@ -7,6 +7,7 @@ keywords: Github Page,jekyll,码志,gitalk,GitHub Application
 ---
 
 # Github Page搭建过程以及之后使用过程中遇到的问题
+
    使用Github Page + jekyll 搭建博客，jekyll模板使用的是[码志](https://github.com/mzlogin/mzlogin.github.io),评论使用gitalk+GitHub Application搭建
 
 ---
