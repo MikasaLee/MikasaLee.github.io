@@ -73,9 +73,10 @@ keywords: win10, install software, record
 
 ### 浏览器
 + firefox：[官网下载](http://www.firefox.com.cn)	
-+ 压缩：7-zip和winrar
-	+ 7-zip：[官网下载](https://www.7-zip.org)	
-	+ winrar：暂时还没找见无广告的破解版
+
+### 压缩：7-zip和winrar
++ 7-zip：[官网下载](https://www.7-zip.org)	
++ winrar：暂时还没找见无广告的破解版
 
 ### 硬盘分区
 + DiskGenius：[官网下载](https://www.diskgenius.cn/)	
