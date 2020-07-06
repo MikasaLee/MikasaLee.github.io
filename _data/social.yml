@@ -2,9 +2,9 @@
   name:  MikasaLee
   url: https://github.com/MikasaLee
 
-#- sitename: 掘金
-#  name: mzlogin
-#  url: http://gold.xitu.io/user/570ddaeb2e958a005c63b2da
+- sitename: 力扣(LeetCode)
+  name: MikasaLee
+  url: https://leetcode-cn.com/u/mikasalee/
 
 #- sitename: LinkedIn
 #  name: mazhuang
