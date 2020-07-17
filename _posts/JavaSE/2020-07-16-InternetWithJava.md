@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java网络编程的常用类和方法
-categories: java
+categories: java se
 description: 
 keywords: Internet,Java
 ---
