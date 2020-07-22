@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java多线程
+title: Java多线程上 --- 创建多线程 和 多线程的其他状态
 categories: JavaSE
 description: 
 keywords: Thread,Java
