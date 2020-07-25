@@ -398,6 +398,9 @@ public class TestLock implements Runnable{
 + wait() ：表示线程一直等待，直到其他线程通知，与 sleep 不同，会释放锁
 + notify()：唤醒一个处于等待状态的线程
 + **wait() 和 notify()  都是 Object 类的方法，并且使用时必须放在同步代码块或者同步方法中，否则报 java.lang.IllegalMonitorStateException 异常**
+
+
+
 ### 7.1、 管程法解决生产者消费者模式demo
 
 ```java
