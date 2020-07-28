@@ -23,11 +23,11 @@ Annotation 是从JDK5.0开始引入的新技术
 + @Override ： 定义在 java.lang.Override 中，此注解只适用于修饰方法，表示一个方法打算重写父类中的另一个方法
 + @Deprecated ：定义在 java.lang.Deprecated 中，此注解可以用于修饰方法，属性，类。表示不鼓励程序员使用这样的元素，通常是因为它很危险或者存在更好的选择。
 + @SuppressWarnings ：定义在 java.lang.SuppressWarnings 中，用来抑制编译时的警告信息。
-	+ 与前两个不同，需要添加一个参数才能正确使用，这些参数已经定义好了，我们选择性的使用就行
-	+ "参数：all","unchecked",value={"unchecked","deprecation"} 等
+   + 与前两个不同，需要添加一个参数才能正确使用，这些参数已经定义好了，我们选择性的使用就行
+   + 参数："all","unchecked",value={"unchecked","deprecation"} 等
 
 ## 2、 元注解
-+ 元注解(meta-annotation)的作用就是负责注解其他注解，java定义了4个标准的 meta-annotation 类型，他们被用来提供对其他 annotation 类型作说明
++ 元注解（meta-annotation）的作用就是负责注解其他注解，java定义了4个标准的 meta-annotation 类型，他们被用来提供对其他 annotation 类型作说明
 + 这些类型和它们所支持的类在 java.lang.annotation 包中可以找到
 	+ @Target注解：描述注解的使用范围（即：被修饰的注解可以用在什么地方） 
 	+ @Retention注解：用于描述注解的生命周期，一共有三种策略（范围：RUNTIME > CLASS > SOURCE）
