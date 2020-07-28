@@ -7,7 +7,8 @@ keywords: Java,Reflection,Annotation
 ---
 
 # 注解
-+ Annotation 是从JDK5.0开始引入的新技术
+Annotation 是从JDK5.0开始引入的新技术
+
 + Annotation 的作用：
 	+ 不是程序本身，但可以对程序作出解释。(这一点跟注释(comment)没什么区别)
 	+ **可以被其他程序（eg：编译器等）读取**
