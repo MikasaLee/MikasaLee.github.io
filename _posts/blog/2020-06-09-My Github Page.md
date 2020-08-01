@@ -7,7 +7,7 @@ keywords: Github Page,jekyll,码志,gitalk,GitHub Application
 ---
 
 
-使用Github Page + jekyll 搭建博客，jekyll模板使用的是[码志](https://github.com/mzlogin/mzlogin.github.io),评论使用gitalk+GitHub Application搭建
+使用Github Page + jekyll 搭建博客，jekyll模板使用的是 [码志](https://github.com/mzlogin/mzlogin.github.io) ，评论使用gitalk+GitHub Application搭建
 
 ---
 
@@ -22,7 +22,11 @@ keywords: Github Page,jekyll,码志,gitalk,GitHub Application
 ---
 
 # 准备
-   参考[使用Github pages+jekyll搭建自己的博客（windows版）](https://www.cnblogs.com/zjjDaily/p/8695978.html) 完成Github账户注册（注：如果之后是直接fork jekyll的主题，那么无需创建Github Page，只需要fork主题之后修改仓库名称即可；如果是想自己clone/download/实现自己的jekyll模版，那么需要创建Github Page）。并在本机上安装好Ruby和jekyll。jekyll主题我选择的是[码志](https://github.com/mzlogin/mzlogin.github.io)，可以直接fork大佬的项目然后修改配置。
+  参考 [使用Github pages+jekyll搭建自己的博客（windows版）](https://www.cnblogs.com/zjjDaily/p/8695978.html) 完成Github账户注册
+
+  （注：如果之后是直接fork jekyll的主题，那么无需创建 Github Page，只需要 fork 主题之后修改仓库名称即可；如果是想自己 clone/download/ 实现自己的jekyll模版，那么需要创建 Github Page ）。
+
+  然后在本机上安装好 Ruby 和 jekyl l。 jekyll 主题我选择的是[码志](https://github.com/mzlogin/mzlogin.github.io)，可以直接 fork 大佬的项目然后修改配置。
 
 ---
 
