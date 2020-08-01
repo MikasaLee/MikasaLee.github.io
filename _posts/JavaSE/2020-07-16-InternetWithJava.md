@@ -33,7 +33,7 @@ Java 中使用 `InetAddress` 类表示 IP 地址，该类没有构造器，通�
 Java 中使用 `InetSocketAddress` 类表示套接字，通过构造器创建对象，注意指定 ip 和端口。
 
 ```java
-		InetSocketAddress inetSocketAddress = new InetSocketAddress("www.baidu.com",443);
+        InetSocketAddress inetSocketAddress = new InetSocketAddress("www.baidu.com",443);
         System.out.println(inetSocketAddress);
 
         System.out.println(inetSocketAddress.getHostName());    //域名
@@ -125,7 +125,8 @@ public class TcpClientDemo01 {
 
 ## 3.2、UDP
 
-++ ** server 端**
++ **server 端**
+
 准确来说， UDP 没有 Server 和 Client 的概念，因为每一个机器都可以为 Server 或 Client，应该称之为发送端和接收端。
 
 ```java
@@ -148,7 +149,9 @@ public class UdpServerDemo01 {
 
 ```
 
-+ ** Client 端**
++ **client 端**
+
+
 ```java
 //不需要连接服务器
 public class UdpClientDemo01 {
@@ -173,7 +176,7 @@ public class UdpClientDemo01 {
 
 # 4、 文件上传
 
-+ ** server 端**
++ **server 端**
 
 ```java
 public class TcpServerDemo02 {
@@ -204,7 +207,7 @@ public class TcpServerDemo02 {
 
 ```
 
-+ ** client 端**
++ **client 端**
 
 ```java
 public class TcpClientDemo02 {
@@ -251,6 +254,7 @@ public class TcpClientDemo02 {
 # 5、 URL
 
 利用 URL 下载网易云的音乐
+
 ```java
 public class URLDemo01 {
     public static void main(String[] args) throws Exception {
