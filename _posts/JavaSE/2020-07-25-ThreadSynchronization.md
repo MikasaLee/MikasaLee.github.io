@@ -15,7 +15,7 @@ keywords: Thread,Java，synchronization
 + 锁：保证数据在方法中被访问时的正确性，引入锁机制
 
 # 2、 三大不安全案例
-# 2.1、 买票案例
+## 2.1、 买票案例
 ```java
 
 public class UnsafeBuyTicket {
