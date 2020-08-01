@@ -10,12 +10,14 @@ keywords: Java,Reflection,Annotation
 Annotation 是从JDK5.0开始引入的新技术
 
 + Annotation 的作用：
-	+ 不是程序本身，但可以对程序作出解释。(这一点跟注释(comment)没什么区别)
+	+ 不是程序本身，但可以对程序作出解释。（这一点跟 注释（comment）没什么区别）
 	+ **可以被其他程序（eg：编译器等）读取**
 + Annotation 的格式
-	+ 注解是以 `@注释名` 在代码中存在的，还可以添加一些参数值（eg：`@SuppressWarnings(value="unchecked")`）
+	+ 注解是以 `@注释名` 在代码中存在的，还可以添加一些参数值
+    （eg：`@SuppressWarnings(value="unchecked")`）
 + Annotation 在哪里可以使用？
 	+ 可以附加在 package，class，method，field 等上面，相当于给他们添加了额外的辅助信息，我们可以通过反射机制编程实现对这些元数据的访问
+
 + 注解可以分为 内置注解，元注解，自定义注解
 
 ## 1、 内置注解
@@ -92,8 +94,10 @@ public class Test03 {
 
 # 反射
 + Reflection(反射)是java被视为准动态语言的关键，反射机制允许程序在执行期借助于Reflection API取得任何类的内部信息，并能直接操作任意对象的内部属性及方法。
-	eg ：`Class stringClass = Class.forName("java.lang.String"); `
-+ 加载完类之后，在堆内存的方法区中就产生了一个Class类型的对象(一个类只有一个Class对象)，这个对象就**包含了完整的类的结构信息。我们可以通过这个对象看到类的结构**。
+
+	eg ：`Class stringClass = Class.forName("java.lang.String");`
+
++ 加载完类之后，在堆内存的方法区中就产生了一个Class类型的对象（一个类只有一个Class对象），这个对象就**包含了完整的类的结构信息。我们可以通过这个对象看到类的结构**。
 + 正常方式：引入需要的"包类"名称 ——> 通过new实例化 ——> 取得实例化对象
 + 反射方式：实例化对象 ——> getClass()方法 ——> 得到完整的"包类"名称
 + 反射的优缺点：
@@ -167,11 +171,11 @@ class User{
 }
 ```
 ### 1.2、 得到Class类的几种方式
-1. 若已知具体的类，通过类的 class 属性获取，该方法最为安全可靠，程序性能最高
+1. 若已知具体的类，通过类的 class 属性获取，该方法最为安全可靠，程序性能最高：
 	`Class c1 = Person.class;`
-2. 已知某个类的实例，调用该实例的getClass() 方法获取 Class 对象
+2. 已知某个类的实例，调用该实例的getClass() 方法获取 Class 对象：
 	`Class c2 = person.getClass();`
-3. 已知一个类的全类名，且该类在类路径下，可通过 Class 类的静态方法 forName() 获取，可能抛出 ClassNotFoundException 异常
+3. 已知一个类的全类名，且该类在类路径下，可通过 Class 类的静态方法 forName() 获取，可能抛出 ClassNotFoundException 异常：
 	`Class c3 = Class.forName("com.lrr.reflection.Person");`
 4. 内置基本数据类型可以直接用类名.Type
 5. 还可以利用ClassLoader (之后介绍)
@@ -300,15 +304,15 @@ class java.lang.Class 1610427175
    
 ### 2.2、 类的加载过程
 当程序主动使用某个类时，如果该类还未被加载到内存中，则系统会通过以下三个步骤来对类进行初始化
-+ 类的加载(Load)：将类的class文件字节码读入内存，并将这些静态数据(**代码，常量池，静态方法，静态变量**)转换成方法区的运行时数据结构，然后为之创建一个java.lang.Class对象来表示该类(**注意这时的Class对象并没有被初始化，只是在堆中创建了一个指向方法区的对象，所以此阶段为 Load 而不是 Initialize **)。此过程由类加载器完成。
-+ 类的链接(Link)：将类的二进制数据合并到 JRE 中
++ 类的加载（Load）：将类的class文件字节码读入内存，并将这些静态数据（**代码，常量池，静态方法，静态变量**）转换成方法区的运行时数据结构，然后为之创建一个java.lang.Class对象来表示该类（**注意这时的Class对象并没有被初始化，只是在堆中创建了一个指向方法区的对象，所以此阶段为 Load 而不是 Initialize **）。此过程由类加载器完成。
++ 类的链接（Link）：将类的二进制数据合并到 JRE 中
    + 验证：确保加载的类信息符合 JVM 规范，没有安全方面的问题
    + 准备：正式为类变量(static)分配内存并设置类变量默认初始值的阶段（**注意static变量在类初始化之前的链接阶段创建的，也就是先有static变量，再有Class类**），这些内存都将在方法区中进行分配。
    + 解析：虚拟机常量池内的符号引用(常量名)替换为直接引用(地址)的过程
-+ 类的初始化(Initialize)：JVM负责对类进行初始化
++ 类的初始化（Initialize）：JVM负责对类进行初始化
    + 执行类构造器 `<clinit>()` 方法的过程。类构造器 `<clinit>()` 方法是由 JVM 自动收集类中所有类变量的赋值动作和静态代码块中的语句合并而成。（类构造器是构造类信息的，不是构造该类对象的构造器）
    + 当初始化一个类的时候，如果发现其父类还没有初始化，则需要先触发其父类的初始化
-   + 虚拟机会保证一个类的`<clinit>()`方法在多线程环境中被正确加锁和同步(确保类加载安全) 
+   + 虚拟机会保证一个类的`<clinit>()`方法在多线程环境中被正确加锁和同步（确保类加载安全）
 
 Demo：
 ```java
@@ -353,17 +357,17 @@ class A{
 ```
 
 ### 2.3、 什么时候会发生类初始化
-+ 类的主动引用(一定会发生类的初始化)
++ 类的主动引用（一定会发生类的初始化）
 	+ 当虚拟机启动时，先初始化 main 方法所在的类
 	+ new 一个类的对象
-	+ 调用类的静态成员(除了 final 常量) 和 静态方法
+	+ 调用类的静态成员（除了 final 常量）和 静态方法
 	+ 使用java.lang.reflect 包的方法对类进行反射调用
 	+ 当初始化一个类，如果其父类没有被初始化，则先会初始化它的父类
-+ 类的被动引用(不会发生类的初始化)
++ 类的被动引用（不会发生类的初始化）
 	+ 当访问一个静态域时，只有真正声明这个域的类才会被初始化。如：当通过子类引用父类的静态变量，不会导致子类初始化
 	+ 只声明了一个类
 	+ 通过数组定义类引用，不会触发此类的初始化
-	+ 引用常量不会触发此类的初始化(常量在链接阶段就存入调入类的常量池中了)
+	+ 引用常量不会触发此类的初始化（常量在链接阶段就存入调入类的常量池中了）
 
 Demo：
 ```java
@@ -404,9 +408,9 @@ class Son extends Father{
 + 类加载器的作用（前文有）：将 class 文件字节码内容加载到内存中，并将这些静态数据转换成方法区的运行时数据接口，然后在堆中生成一个代表这个类的 java.lang.Class 对象，作为方法区中类数据的访问入口。
 + 类缓存：标准的JavaSE类加载器可以按照要求查找类，但一旦某个类被加载到类加载器中，它将维持加载（缓存）一段时间。不过JVM垃圾回收机制可以回收这些Class对象
 + JVM 规定了如下类型的类加载器
-	+ 引导类加载器(Bootstrap ClassLoader)：扩展类加载器的父类，用C++编写的，是JVM自带的类加载器，负责Java平台核心库(rt.jar包)，用来装载核心类库。该加载器无法直接获取
-	+ 扩展类加载器(Extension ClassLoader)：系统类加载器的父类，负责 jre/lib/ext 目录下的jar包或 -D java.ext.dirs 指定目录下的jar包装入工作库
-	+ 系统类加载器/用户类加载器(System ClassLoader/Application ClassLoader 这俩是一个东西两种叫法)：负责 java -classpath 或 -D java.class.path所指的目录下的类与jar包装入工作，是最常用的加载器
+	+ 引导类加载器（Bootstrap ClassLoader）：扩展类加载器的父类，用C++编写的，是JVM自带的类加载器，负责Java平台核心库(rt.jar包)，用来装载核心类库。该加载器无法直接获取
+	+ 扩展类加载器（Extension ClassLoader）：系统类加载器的父类，负责 jre/lib/ext 目录下的jar包或 -D java.ext.dirs 指定目录下的jar包装入工作库
+	+ 系统类加载器/用户类加载器（System ClassLoader/Application ClassLoader 这俩是一个东西两种叫法）：负责 java -classpath 或 -D java.class.path所指的目录下的类与jar包装入工作，是最常用的加载器
 
 ```java
 public class Test06 {
@@ -500,23 +504,23 @@ IDEA 点进去/或者文档 自己看
 
 **创建对象**：
 + 调用无参构造器创建类的对象：调用Class对象的newInstance()方法，需要满足以下两个要求
-   1. 类必须有一个无参数的构造器(因为本质就是调用无参的构造器)
+   1. 类必须有一个无参数的构造器（因为本质就是调用无参的构造器）
    2. 类的构造器的访问权限需要足够
 + 调用有参构造器创建类的对象：
-   1. 通过Class类的getDeclaredConstructor(Class .. parameterType) 得到本类指定形参类型的构造器
+   1. 通过Class类的 `getDeclaredConstructor(Class .. parameterType)`  得到本类指定形参类型的构造器
    2. 向构造器的形参传递一个对象数组进去，里面包含了构造器所需的各个参数
    3. 通过Constructor实例化对象
 
 **使用对象**：
 
- 1. 通过Class类的getMethod(String name,Class ...parameterTypes)方法取得一个Method对象，并设置此方法操作时所需要的参数类型
+ 1. 通过Class类的 `getMethod(String name,Class ...parameterTypes)` 方法取得一个Method对象，并设置此方法操作时所需要的参数类型
  2. 之后使用invoke方法进行调用，并想方法中传递要设置的obj对象的参数信息
- 3. public Object invoke(Object obj, Object... args)
+ 3. `public Object invoke(Object obj, Object... args)`
     + Object 对应原方法的返回值，若原方法无返回值，此时返回null
     + 若原方法为静态方法，此时形参obj可为null
     + 若原方法参数列表为空，则args为null
     + 若原方法声明为private,则需要在调用invoke()前，显示调用方法对象的setAccessible(true)方法，才能访问private的方法
- 4. setAccessible()：启动和禁用访问安全检查的开关
+ 4. `setAccessible()`：启动和禁用访问安全检查的开关
     + Method和Field、Constructor对象都有 setAccessible() 方法
     + 参数为true表示使用时取消该反射对象的Java语言访问检查
       + 可以提高访问效率。如果代码中必须使用反射，并且频繁被调用，那么请设置为true
