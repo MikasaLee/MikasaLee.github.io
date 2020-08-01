@@ -6,15 +6,16 @@ description:
 keywords: Thread,Java，synchronization
 ---
 
-# 线程同步
+接上文[Java多线程上 --- 创建多线程 和 多线程的其他状态](https://mikasalee.github.io/2020/07/21/ThreadCreate/)，继续解决线程基础的最后一个点：线程同步
 
-## 1、 概念
+
+# 1、 概念
 + 并发：同一个对象被多个线程同时操作
 + 线程同步：本质是一种等待机制，多个需要同时访问此对象的线程进入这个**对象的等待池** 形成队列，等待前面线程使用完毕，下一个线程再使用
 + 锁：保证数据在方法中被访问时的正确性，引入锁机制
 
-## 2、 三大不安全案例
-### 2.1、 买票案例
+# 2、 三大不安全案例
+# 2.1、 买票案例
 ```java
 
 public class UnsafeBuyTicket {
@@ -70,7 +71,7 @@ class BuyTicket implements Runnable{
 ```
 可以很容易的看到最后一张票被两个人同时买了，并且还出现`黄牛买到了第0张票`的错误现象
 
-### 2.2、 银行取钱案例
+## 2.2、 银行取钱案例
 ```java
 public class UnsafeBank {
     public static void main(String[] args) {
@@ -122,7 +123,7 @@ class Bank implements Runnable{
 ```
 总共只有100 ，但是却取出来160。
 
-### 2.3、 集合不安全案例
+## 2.3、 集合不安全案例
 
 ```java
 public class UnsafeList {
@@ -149,11 +150,11 @@ public class UnsafeList {
 ```
 总共将 100000 个线程放入集合中，但是最终集合的 size() 为 99987 。这是因为发生多个线程放入list的同一个槽。
 
-## 3、 同步方法以及同步块
+# 3、 同步方法以及同步块
 + 我们可以通过private关键字保证成员只能被方法访问，所以没有同步成员这一说法
 + 同步方法以及同步块都是通过 `synchronized` 关键字实现
 
-### 3.1、 同步方法
+## 3.1、 同步方法
 + 只需要在方法头加上 synchronized 关键字修饰即可 ：
    `public **synchronized** void method(){}`
 
@@ -163,7 +164,7 @@ public class UnsafeList {
 	+ 锁的范围是整个方法，锁的太多，浪费资源
 + **所以比起同步方法，更建议使用同步块**
 
-### 3.2、 同步块
+## 3.2、 同步块
 + `synchronized(obj){}`
 + obj 称之为同步监视器
 	+ obj可以为任何对象，但是推荐使用共享资源作为同步监视器
@@ -174,8 +175,8 @@ public class UnsafeList {
 	3. 第一个线程访问完毕，解除同步监视器。
 	4. 第二个线程访问，发现同步监视器没有锁，然后锁定并访问。
 
-## 4、 使用 同步方法以及同步块 来解决三大不安全案例
-### 4.1、 买票案例
+# 4、 使用 同步方法以及同步块 来解决三大不安全案例
+## 4.1、 买票案例
 ```java
 //不安全的买票
 public class UnsafeBuyTicket {
@@ -230,7 +231,7 @@ class BuyTicket implements Runnable{
 没票了
 没票了
 ```
-### 4.2、 银行取钱案例
+## 4.2、 银行取钱案例
 ```java
 public class UnsafeBank {
     public static void main(String[] args) {
@@ -284,7 +285,7 @@ class Bank implements Runnable{
 余额不足！
 ```
 
-### 4.3、 集合不安全案例
+## 4.3、 集合不安全案例
 ```java
 public class UnsafeList {
     public static void main(String[] args) {
@@ -312,7 +313,7 @@ public class UnsafeList {
 100000
 ```
 
-### 4.4、 用 CopyOnWriteArrayList 来解决 集合不安全案例
+## 4.4、 用 CopyOnWriteArrayList 来解决 集合不安全案例
 CopyOnWriteArrayList 是juc包下面集合类，它与ArrayList最大的不同是线程安全
 ```java
 public class UnsafeList {
@@ -339,7 +340,7 @@ public class UnsafeList {
 100000
 ```
 
-## 5、 死锁
+# 5、 死锁
 + 死锁：多个线程互相抱着对方需要的资源，然后形成僵持
 + 产生死锁的四个必要条件：（只要破坏任意一个就能避免死锁发生）
 	1. 互斥条件：一个资源每次只能被一个进程使用
@@ -347,12 +348,12 @@ public class UnsafeList {
 	3. 不剥夺条件：进程已获得的资源，在未使用完之前，不能强行剥夺
 	4. 循环等待条件：若干进程之间形成一种头尾相接的循环等待资源关系
 
-## 6、 Lock 接口
+# 6、 Lock 接口
 + 从 JDK 5.0 开始，Java提供了更强大的线程同步机制——通过显式定义*同步锁对象*来实现同步(synchronized 是隐式定义的同步锁，因为开关锁的操作都不用我们编写)。同步锁使用 Lock 对象充当
 + java.util.concurrent.locks.Lock 接口是控制多个线程对共享资源进行访问的工具。锁提供了对共享资源的独占访问，每次只能有一个线程对 Lock 对象加锁，线程开始访问共享资源前应先获得 Lock 对象
 + **ReentrantLock**  类实现了 Lock，它拥有与 synchronized 相同的并发性和内存语义，在实现线程安全的控制中，比较常用的是 ReentrantLock，可以显式加锁、释放锁 
 
-### 6.1、 买票demo
+## 6.1、 买票demo
 ```java
 public class TestLock implements Runnable{
 
@@ -387,21 +388,21 @@ public class TestLock implements Runnable{
     }
 }
 ```
-### 6.2、 synchronized 与 Lock 的对比
+## 6.2、 synchronized 与 Lock 的对比
 + Lock 是显示锁（手动开锁关锁），synchronized 是隐式锁，出了作用域自动释放
 + Lock 只有代码块锁，synchronized 有代码块锁和方法锁
 + 使用 Lock 锁，JVM 将花费较少的时间来调度线程，性能更好。并且具有更好的扩展性（提供更多子类）
 + 优先使用顺序：
 	Lock > 同步代码块 > 同步方法
 	
-## 7、 线程通信
+# 7、 线程通信
 + wait() ：表示线程一直等待，直到其他线程通知，与 sleep 不同，会释放锁
 + notify()：唤醒一个处于等待状态的线程
 + **wait() 和 notify()  都是 Object 类的方法，并且使用时必须放在同步代码块或者同步方法中，否则报 java.lang.IllegalMonitorStateException 异常**
 
 
 
-### 7.1、 管程法解决生产者消费者模式demo
+## 7.1、 管程法解决生产者消费者模式demo
 
 ```java
 public class TestPC {
@@ -479,7 +480,7 @@ class Plate{
 }
 ```
 
-## 8、 线程池
+# 8、 线程池
 + 背景：对使用量特别大的资源进行频繁的创建和销毁（比如并发情况下的线程），对性能影响很大
 + 思路：提前创建好多个线程，放入线程池中，使用时直接获取，使用完放回池中。可以避免频繁创建销毁、实现重复利用。
 + 好处：
@@ -490,7 +491,7 @@ class Plate{
 	+ ExecutorService：真正的线程池接口。常见子类ThreadPoolExecutor
 	+ Executors：工具类、线程池的工厂类，用于创建并返回不同类型的线程池
 
-### 8.1、 Demo
+## 8.1、 Demo
 ```java
 public class TestPool {
     public static void main(String[] args) {
