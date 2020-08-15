@@ -22,7 +22,7 @@ keywords: win10, install software, record
 
 ### 数据库
 
-+ MySql：[官网下载](https://dev.mysql.com/downloads/)
++ MySql：[官网下载](https://dev.mysql.com/downloads/) 。别下载 EXE 的，下载压缩版（Archive）的，这样好卸载
 + NavicatforMySQL：网盘见
 
 ## 编辑器
