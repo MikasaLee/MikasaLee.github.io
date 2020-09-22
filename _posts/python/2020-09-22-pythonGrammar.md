@@ -102,9 +102,14 @@ More
 >range() 所返回的对象在许多方面表现得像一个列表，但实际上却并不是（ python2 的时候返回的是列表）。此对象会在你迭代它时基于所希望的序列返回连续的项，但它没有真正生成列表，这样就能节省空间。
 >我们称这样对象为 iterable（迭代值），也就是说，适合作为这样的目标对象：函数和结构期望从中获取连续的项直到所提供的项全部耗尽。 我们已经看到 for 语句就是这样一种结构，而接受可迭代对象的函数的一个例子是 sum():
 
+
+
+
 **具体参考知乎[这篇回答](https://www.zhihu.com/search?type=content&q=range%20python) **
 
 **牢记：<font color='red'>以后使用range时一律套list</font> **
+
+
 
 + 循环中的 else 子句:
 ```python
@@ -154,7 +159,8 @@ end
 
 
 + 定义函数: `def`
-不带返回值：
+
+  不带返回值：
 ```python
 >>> def fib(n):    # write Fibonacci series up to n
 ...     """Print a Fibonacci series up to n."""
@@ -168,7 +174,7 @@ end
 ... fib(2000)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
 ```
-带返回值：
+​       带返回值：
 ```python
 >>> def fib2(n):  # return Fibonacci series up to n
 ...     """Return a list containing the Fibonacci series up to n."""
@@ -267,6 +273,7 @@ TypeError: 'tuple' object does not support item assignment
 ```
 
 + 集合( `set` )：
+
 ```python
 >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
 >>> print(basket)                      # show that duplicates have been removed
