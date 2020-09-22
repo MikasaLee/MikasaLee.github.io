@@ -102,12 +102,9 @@ More
 >range() 所返回的对象在许多方面表现得像一个列表，但实际上却并不是（ python2 的时候返回的是列表）。此对象会在你迭代它时基于所希望的序列返回连续的项，但它没有真正生成列表，这样就能节省空间。
 >我们称这样对象为 iterable（迭代值），也就是说，适合作为这样的目标对象：函数和结构期望从中获取连续的项直到所提供的项全部耗尽。 我们已经看到 for 语句就是这样一种结构，而接受可迭代对象的函数的一个例子是 sum():
 
+**具体参考知乎[这篇回答](https://www.zhihu.com/search?type=content&q=range%20python)**
 
-
-
-**具体参考知乎[这篇回答](https://www.zhihu.com/search?type=content&q=range%20python) **
-
-**牢记：<font color='red'>以后使用range时一律套list</font> **
+**牢记：<font color='red'>以后使用range时一律套list</font>**
 
 
 
@@ -191,6 +188,8 @@ end
 ```
 
 + `in` 关键字：以测试一个序列是否包含某个值。
+
+
 ```python
 >>> i = 'y'
 >>> if i in ['y','yes']:
@@ -203,7 +202,10 @@ yes
 ... 
 >>> 
 ```
+
 + <font color='red'>重要警告： 默认值只会执行一次。这条规则在默认值为可变对象（列表、字典以及大多数类实例）时很重要。比如，下面的函数会存储在后续调用中传递给它的参数:</font>
+
+
 ```python
 def f(a, L=[]):
     L.append(a)
@@ -220,6 +222,7 @@ print(f(3))
 ```
 
 如果你不想要在后续调用之间共享默认值，你可以这样写这个函数:
+
 ```python
 def f(a, L=None):
     if L is None:
