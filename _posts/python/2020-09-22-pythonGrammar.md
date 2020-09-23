@@ -424,6 +424,17 @@ Traceback (most recent call last):
 
 
 
++ ** `is/is not`  和 `==/!=**` ： `is` 用于判断两个变量引用对象是否为同一个， `==` 用于判断引用变量的值是否相等。类似于 `Java` 中的 `equal()` 和 `==` 。反之，`is not`  用于判断两个变量是否引用自不同的对象，而 `!=` 用于判断引用变量的值是否不等。
+
+
++ 用下标遍历 `List` ：
+```python
+for i,option in enumerate(select): # i就是下标
+	.....
+```
+
+
+
 
 ## 1.2、目前觉得用不到，跳过。等用到了再学的玩意
 
