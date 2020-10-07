@@ -424,14 +424,55 @@ Traceback (most recent call last):
 
 
 
-+ ** `is/is not`  和 `==/!=**` ： `is` 用于判断两个变量引用对象是否为同一个， `==` 用于判断引用变量的值是否相等。类似于 `Java` 中的 `equal()` 和 `==` 。反之，`is not`  用于判断两个变量是否引用自不同的对象，而 `!=` 用于判断引用变量的值是否不等。
++ **`is/is not` 和 `==/!=` ** ： `is` 用于判断两个变量引用对象是否为同一个， `==` 用于判断引用变量的值是否相等。类似于 `Java` 中的 `==` 和 `equal()`( **看仔细了，是反回来的**) 。反之，`is not`  用于判断两个变量是否引用自不同的对象，而 `!=` 用于判断引用变量的值是否不等。
 
 
 + 用下标遍历 `List` ：
 ```python
-for i,option in enumerate(select): # i就是下标
-	.....
+#全部遍历
+for i,option in enumerate(select): # i就是下标，select是一维列表
+	select[i] = ...
+#
+for i,option in enumerate(select):	#select是二维列表
+	for j,val in enumerate(option):
+		select[i][j] = ...
+
+# 部分遍历
+for j  in enumerate(route[i+1:]): # enumerate(route[i+1:])得到的j是从0开始而不是从i+1开始
+	cursor = j + i + 1 		     # 这才是下标
+	route[cursor] = ...
 ```
+
++ 关于字符串和数字的拼接：
+
+```python
+ # 1.在python中完成字符串和数字的拼接,可以使用内置函数str():
+ # 2.在python中如果直接对字符串和数字进行拼接,会发生报错 
+  print("asdfasfasfd:"+str(num))  # num是数字
+```
+
++ 列表的 浅拷贝和深拷贝：
+```python
+
+list = [1,2,3]
+# 浅拷贝
+list1 = list.copy()
+# 深拷贝
+# 有可能需要导入copy包
+import copy
+list2 = copy.deepcopy(route)
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
