@@ -347,7 +347,7 @@ models.py 就是用来写 model 层的代码。
 
 ### 2.3.2 URLconf 映射
 
-1. 将模块的 URLconf 注册在主 URLconf 中。
+1、 将模块的 URLconf 注册在主 URLconf 中。
 
 ```python
 from photo import views as photo  # import 导包
@@ -358,7 +358,7 @@ urlpatterns = [
 ]
 ```
 
-2. 配置模块的 URLconf 。
+2、 配置模块的 URLconf 。
 
 ```python
 from photo import views as photo
