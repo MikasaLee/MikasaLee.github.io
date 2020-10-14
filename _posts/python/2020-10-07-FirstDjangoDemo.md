@@ -237,7 +237,7 @@ FileSave_DIR = os.path.join(BASE_DIR,"file") #上传文件的存放路径为项�
 
 **urls.py：** 大白话讲，就是告诉 Django 哪个 url 去调用哪个视图代码
 
-<font color='red'>**Warning：路径问题一定要注意 '/'**</font>
+<font color='red'>Warning：路径问题一定要注意 '/'</font>
 
 + 模版中的 urls.py 文件：
 
@@ -359,6 +359,7 @@ urlpatterns = [
 ```
 
 2. 配置模块的 URLconf 。
+
 ```python
 from photo import views as photo
 app_name = 'photo'
