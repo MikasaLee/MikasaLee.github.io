@@ -366,6 +366,7 @@ urlpatterns = [
 ### 2.3.3 编写该模块的 view 层代码
 
 目前来说，需要三个视图：主页视图 index，图片上传视图 upload，图片上传后返回的结果视图 result。view.py 中的代码：
+
 ```python
 # Create your views here.
 from django.shortcuts import render,redirect
@@ -399,7 +400,7 @@ def result(request):
 
 对于 result 视图来说，对应的 form 表单为：
 ```html
-<form action="{% url 'photo:result'%}" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
     图片名称：<p><input type="input" name="photoName"></p>
     <p><input type="file" name="photo"></p>
     <p><input type="submit" value="submit"></p>
@@ -460,7 +461,7 @@ Django 可以根据这个 photo 类来生成创建 photo 表 ( create table )的
 
 ### 2.3.4 Util 工具包
 
-至此，第一阶段的绝大部分任务已经完成，这里是搞了一个工具库，把 一些常用的工具放到这里。`Utils/tools.py` 中目前只有一个工具：将文件保存至本地(save_file)。 
+至此，第一阶段的绝大部分任务已经完成，这里是搞了一个工具库，把 一些常用的工具放到这里。`Utils/tools.py` 中目前只有一个工具：将文件保存至本地（ save_file 函数）。 
 
 ```python
 import os
