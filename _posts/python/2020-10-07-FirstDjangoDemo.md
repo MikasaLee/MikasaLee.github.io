@@ -240,7 +240,10 @@ FileSave_DIR = os.path.join(BASE_DIR,"file") #上传文件的存放路径为项�
 <font color='red'>**Warning：路径问题一定要注意 '/'**</font>
 
 + 模版中的 urls.py 文件：
+
+
 ```python
+
 """mp URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -292,6 +295,8 @@ urlpatterns = [
 PS：这模版大致写的不错，美中不足的是每个 html 文件的头文件都复制粘贴的一遍，搞的代码复用性很差，更改很麻烦，所以用了一个 `_head.html` 提取了这部分代码。
 
 **全局配置：**
+
+根据上文的介绍或者参考官方文档，按照自己的需求来配置全局。
 
 # 2.3、 写后台
 
