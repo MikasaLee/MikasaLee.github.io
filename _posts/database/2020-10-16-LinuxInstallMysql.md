@@ -1,12 +1,12 @@
 ---
 layout: post
-title: LinuxInstallMysql
+title: linux中非root安装mysql
 categories: database
 description: 
 keywords: mysql, linux, install
 ---
 
-记录一次在实验室的服务器中在自己的账号下（非 root ）安装mysql，然后网上找见一篇特别牛逼的博客，大佬把所有能遇见的意外情况都记录下来了。美中不足的是大佬装的是 mysql5.7 的版本，我的需求是 8.0 的版本，然后还要加入到 PATH 中，所以会在大佬的基础略微改动。
+记录一次在实验室的服务器中在自己的账号下（非 root ）安装 mysql ，然后网上找见一篇特别牛逼的博客，大佬把所有能遇见的意外情况都记录下来了。美中不足的是大佬装的是 mysql5.7 的版本，我的需求是 8.0 的版本，然后还要加入到 PATH 中，所以会在大佬的基础略微改动。
 
 # 1、 跟着大佬走
 如果想安装 mysql5.X的版本，那么请完全跟着大佬走不用在往下看了：[Linux普通用户安装mysql-5.7.21](https://blog.csdn.net/tianpy5/article/details/79842888)
