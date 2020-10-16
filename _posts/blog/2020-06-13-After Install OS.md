@@ -68,7 +68,7 @@ keywords: win10, install software, record
 
 ### 播放器
 + 视频：[potplayer](https://potplayer.org/)
-+ 音乐：暂无
++ 音乐 （ 2020-10-16 update）： [Listen 1](http://listen1.github.io/listen1/)
 
 ### 浏览器
 + firefox：[官网下载](http://www.firefox.com.cn)	
