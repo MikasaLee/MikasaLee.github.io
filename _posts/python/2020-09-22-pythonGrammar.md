@@ -325,6 +325,7 @@ False
 ```
 
 创建字典的其他方法：
+
 ```python
 >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)]) 		#dict() 构造函数可以直接从键值对序列里创建字典:
 {'sape': 4139, 'guido': 4127, 'jack': 4098}
@@ -428,6 +429,7 @@ Traceback (most recent call last):
 
 
 + 用下标遍历 `List` ：
+
 ```python
 #全部遍历
 for i,option in enumerate(select): # i就是下标，select是一维列表
@@ -452,6 +454,7 @@ for j  in enumerate(route[i+1:]): # enumerate(route[i+1:])得到的j是从0开�
 ```
 
 + 列表的 浅拷贝和深拷贝：
+
 ```python
 
 list = [1,2,3]
