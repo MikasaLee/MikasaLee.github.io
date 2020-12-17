@@ -61,14 +61,18 @@ keywords: win10, install software, record
 
 ### pdf
   拉黑极速，找找其他的，Acrobat Reader DC，只能查看pdf，编辑以及其他功能需要收费，但是如果只是查看的话firefox足够了
+  
   2020/06/18：没找到好的pdf软件，先用firefox看吧
+  
   2020/12/13：学姐推荐的福昕pdf针不戳，福昕pdf：[官网下载](https://www.foxitsoftware.cn/) ，下第一个福昕阅读器就行，这个是免费的。
 
 ### Git&GitHub
+
 + GitHub Desktop：[官网下载](https://desktop.github.com/)
 + Git Bash：[官网下载](https://gitforwindows.org)
 
 ### 杀毒软件
+
   之前一直使用的是360，但是ssr与360冲突，所以试一试火绒。
   当然也可以都不装。
 + 火绒：[官网下载](https://www.huorong.cn/person5.html)
