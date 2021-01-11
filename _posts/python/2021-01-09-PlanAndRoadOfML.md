@@ -6,9 +6,11 @@ description:
 keywords: python,machine learning,deep learning,Medical Image Reconstruction,plan
 ---
 
-  从会 python3 基本语法并且只会 python3 基本语法开始。。。
+  科研民工计划和路，都是从了解 python3 基本语法并且只了解 python3 基本语法开始。。。
 
-# 0、 前言
+# 科研民工计划
+
+## 0、 前言
 
 + 总共有三步：机器学习 -> 深度学习 -> 医学图像重建，每一步应该都包含**对应的数学知识**和** python 常用的库/框架**。
 + 虽然是三步，但并不是走完第一步再走完第二步再走完第三步这样子，而是三个同时进行。
@@ -18,13 +20,13 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 + 碰到某某算法，一定要**理解透并复现**，这也就是不让在前面数学知识和 python 框架上深究的原因，**研究生阶段重点是在一个个算法上**，而不是搞开发了。
 
 
-# 1、 机器学习
+## 1、 机器学习
 
-## 1.1、 数学部分
+### 1.1、 数学部分
 
 + 《统计学方法》pdf（李航）：ipad 上都放了半年了，该看了，但是不要指望第一次就能全懂，泛读为主
 
-## 1.2、 python 库/框架
+### 1.2、 python 库/框架
 
   暂且推荐B站UP主孙兴华，不过大家都推荐莫凡，我之前看了他的 python 基础觉得讲的并不好，恰好我又看过孙兴华的关于 python 处理 office 的视频觉得还行。之后有机会都看过的话再说。
 
@@ -32,37 +34,55 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 + Pandas
 + Matplotlib
 
-# 1.3、 机器学习常见的算法
+### 1.3、 机器学习常见的算法
 
 **好好学好好记好好理解好好复现。**
 
 + [B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)：不用多bb。
 + 《机器学习》pdf（周志华）：西瓜书，同样不用多bb，ipad上都快放的长毛了。
 
-# 2、 深度学习
+## 2、 深度学习
 
-## 2.1、 数学部分
+### 2.1、 数学部分
 
   待定
 
-## 2.2、 python 库/框架
+### 2.2、 python 库/框架
 
   tensflow 和 pytorch，具体待定
 
-# 2.3、 深度学习常见的算法
+### 2.3、 深度学习常见的算法
 
   各种GAN，具体待定
 
-# 3、 医学图像重建
+## 3、 医学图像重建
 
-## 3.1、 数学部分
+### 3.1、 数学部分
 
 + [B站视频：傅里叶变换及其应用](https://www.bilibili.com/video/BV1Qx411J7ER)
 
-## 3.2、 python 库/框架
+### 3.2、 python 库/框架
 
   待定
 
-# 3.3、 医学图像重建常见的算法
+### 3.3、 医学图像重建常见的算法
 
   待定
+
+
+
+------
+
+------
+
+------
+
+
+
+# 科研民工之路
+
+## 2021-1-11：
+
++ 当前：目前看到[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)第 11p 结束（第二章完），[课件笔记](http://www.ai-start.com/ml2014/html/week1.html#header-n389)。
++ 接下来：初步理解了线性回归以及线性回归中的梯度下降之后，应该用 Python 去复现它。不过在此之前应该先了解一下 Python 中相关的包：[孙兴华中文讲Python数据分析三部曲入门篇 Numpy教程 Pandas教程 Matplotlib教程](https://www.bilibili.com/video/BV1ji4y157uB)
+
