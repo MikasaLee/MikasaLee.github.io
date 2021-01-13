@@ -37,7 +37,7 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 #### 1.2.2、 Matplotlib：
 
 + [Python 笔记：最全Matplotlib 入门教程](http://www.inimei.cn/archives/593.html)：前七章。
-+ [NumPy  Matplotlib | 菜鸟教程](https://www.runoob.com/numpy/numpy-matplotlib.html)。
++ [NumPy  Matplotlib - 菜鸟教程](https://www.runoob.com/numpy/numpy-matplotlib.html)。
 
 #### 1.2.3、 Pandas：
 
@@ -112,7 +112,7 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 
 >+ 基于菜鸟教程中的 [NumPy 教程](https://www.runoob.com/numpy/numpy-tutorial.html)。
 >+ [Python 笔记：最全Matplotlib 入门教程](http://www.inimei.cn/archives/593.html)：前七章。
->+ [NumPy  Matplotlib | 菜鸟教程](https://www.runoob.com/numpy/numpy-matplotlib.html)。
+>+ [NumPy  Matplotlib - 菜鸟教程](https://www.runoob.com/numpy/numpy-matplotlib.html)。
 >+ [ant-learn-pandas](https://github.com/peiss/ant-learn-pandas) 跑了前12讲，将 Pandas 理解成数据库就行了，所以后面表连接的操作之后就没看，用到的时候再来查。
 
 + 了解到还需要学习的基本类库是 scipy 和 sklearn，但是 sklearn 是将当前常见的机器学习算法封装的一个类库，而吴恩达的机器学习就是说明这些算法怎么来的。所以后续在实现每一个算法的时候要有**非sklearn的版本（自己写底层原理但只是用来理解的**和**sklearn的版本（以后实际用到的）**，所以每一个的sklearn算法等到了具体的某个算法的时候再学。
