@@ -123,3 +123,14 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 
 + 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从12p开始（第三章）。
 
+## 2021-1-19
+
+### 当前：
+
++ 目前看到[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从31p结束（第五章结束）并且作业 ex1_Linear_Regression 完成。
++ 作业ex1 完成期间意识到自己的 python 及其常用类库还很不熟练，导致作业ex1写了好几天才完成，所以后续还需要多加练习。
++ 不过这也算是自己学会的第一个机器学习算法了。
+
+### 接下来：
+
++ 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从32p开始（第六章）。
