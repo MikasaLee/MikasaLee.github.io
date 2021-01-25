@@ -134,3 +134,14 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 ### 接下来：
 
 + 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从32p开始（第六章）。
+
+## 2021-1-25
+
+### 当前：
+
++ 目前看到[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从42p结束（第七章结束）并且作业 ex2_Logistic_Regression 完成。
++ 作业 ex2 完成期间意识到自己的 python 及其常用类库比起 ex1 的时候娴熟了许多。后面再继续多练吧。
+
+### 接下来：
+
++ ex2 中并没有涉及到多元分类，而是在 ex3 中，所以先打算将 ex3 中的多元分类部分完成然后再往后看新的内容
