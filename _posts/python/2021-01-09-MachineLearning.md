@@ -145,3 +145,13 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 ### 接下来：
 
 + ex2 中并没有涉及到多元分类，而是在 ex3 中，所以先打算将 ex3 中的多元分类部分完成然后再往后看新的内容
+
+## 2021-1-26
+
+### 当前：
+
++ ex3 的 part1 部分（多元分类）搞定。
+
+### 接下来：
+
++ 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从43p开始（第八章）。
