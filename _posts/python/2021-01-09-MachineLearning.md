@@ -165,3 +165,15 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 ### 接下来：
 
 + 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从50p开始（第九章）。
+
+## 2021-2-3
+
+### 当前：
+
++ 目前看到[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565) 第57p结束（第九章结束），并且完成 ex4。
++ 虽然完成了作业，但是神经网络尤其是**反向传播算法**还是很模糊，以后肯定还会多次用到这玩意的，希望到时候用到的时候理解能更加深刻吧。
++ 关于相关的数学公式推导，我参考了[这个视频](https://www.bilibili.com/video/BV1QW411g718)。
+
+### 接下来：
+
++ 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从58p开始（第十章）。
