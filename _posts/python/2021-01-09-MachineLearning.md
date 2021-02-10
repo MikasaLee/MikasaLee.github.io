@@ -177,3 +177,14 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 ### 接下来：
 
 + 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从58p开始（第十章）。
+
+## 2021-2-10
+
+### 当前：
+
++ 目前看到[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565) 第64p结束（第十章结束），并且完成 ex5。
+
+### 接下来：
+
++ 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从65p开始（第十一章）。
++ 不过先过年，过完年再继续，过年期间使劲耍~
