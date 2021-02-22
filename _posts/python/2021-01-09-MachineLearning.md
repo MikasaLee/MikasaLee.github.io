@@ -188,3 +188,16 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 
 + 继续往后看[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565)，从65p开始（第十一章）。
 + 不过先过年，过完年再继续，过年期间使劲耍~
+
+## 2021-2-22
+
+### 当前：
+
++ 过了个年，从 2-20 开始看的书
++ 目前看到[B站吴恩达](https://www.bilibili.com/video/BV164411b7dx?from=search&seid=7481822073233109565) 第75p结束（第十二章结束），并且完成 ex5。
++ **但是 SVM 一点都没理解，每一小节都听得很懵逼，并且练习题并没有让自己仿写一个SVM而是直接用的类库，所以也没有加深理解。SVM以后还得找其他资料再重新看重新学。**
+
+
+### 接下来：
+
++ 继续暂停，要准备期末考试了。考完再回来接着看。
