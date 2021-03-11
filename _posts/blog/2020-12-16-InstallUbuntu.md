@@ -112,3 +112,36 @@ WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"
 + 然后 `sudu dpkg -i wpsXX.deb` 就安装完成了
 + 但是当打开 word/excel/ppt 时很可能也会提示缺少字体从而产生乱码，但是非常人性化会提醒缺少哪种字体然后还给了替换方案。不过还是建议下载这种字体而不是替换。
 + 下载好字体后拷贝到将字体拷贝到 `/usr/share/fonts/wps-office/`就OK了。
+
+
+2021-3-10 update：
+居然忘记装 Java了。。。
+
+# 14、 Java
+
+装 openjdk8 + IDEA
+
+## openjdk8：
+
+**1. apt-get 安装： **
+
+```shell
+sudo apt-get install openjdk-8-jdk  
+which java #找到java安装路径
+vim ~/.bashrc
+```
+**2.添加环境变量：**
+
+```
+sudo vim ~/.bashrc
+在尾部加入
+export JAVA_HOME=/usr/bin/java
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${PATH}:${JAVA_HOME}/bin
+```
+
+## IDEA：
+
++ 官网下载链接：[感谢您下载 IntelliJ IDEA！](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=linux)
++ 解压安装之后，还是跟 pycharm一样用[ide-eval-resetter](https://gitee.com/pengzhile/ide-eval-resetter/)来重置免费期。
