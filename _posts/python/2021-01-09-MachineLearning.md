@@ -94,7 +94,7 @@ keywords: python,machine learning,deep learning,Medical Image Reconstruction,pla
 
 # 科研民工之路
 
-## 2021-1-11：
+## 2021-1-11
 
 ### 当前：
 
