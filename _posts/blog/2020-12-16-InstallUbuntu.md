@@ -114,8 +114,10 @@ WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"
 + 下载好字体后拷贝到将字体拷贝到 `/usr/share/fonts/wps-office/`就OK了。
 
 
-2021-3-10 update：
+
+**2021-3-10 update：
 居然忘记装 Java了。。。
+**
 
 # 14、 Java
 
@@ -145,3 +147,24 @@ export PATH=${PATH}:${JAVA_HOME}/bin
 
 + 官网下载链接：[感谢您下载 IntelliJ IDEA！](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=linux)
 + 解压安装之后，还是跟 pycharm一样用[ide-eval-resetter](https://gitee.com/pengzhile/ide-eval-resetter/)来重置免费期。
+
+
+
+**2021-3-15 update：
+找见一个翻译英文文献的好东西
+**
+
+# 15、翻译
+
+## goldendict
+
++ 安装参考：[Linux 下一款非常好用的翻译软件](https://zhuanlan.zhihu.com/p/67156145)
++ 添加 `Google Translate`：[google-translate-for-goldendict](https://github.com/xinebf/google-translate-for-goldendict)
+
+Note：我在安装`Google Translate`时报了代码255的错误，原因是 `Python` 命令冲突导致，他去找 `Python` 是去 `/usr/bin`下，但我的 `Python` 解释器是在家目录下 Anaconda 中的，所以我的命令行命令为：
+
+```shell
+~/anaconda3/bin/python -m googletranslate zh-CN %GDWORD% -s "translate.google.cn"
+```
+
+然后就OK了
